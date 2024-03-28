@@ -1,14 +1,39 @@
 /* Change color of box */
 
 .box {
-  background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
   border-radius: 25px;
+  border-radius: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.box2 {
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  border-radius: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .image {
   border-radius: 25px;
 }
+
+.avg {
+  width: 250px;
+  border-radius: 25px;
+}
+
+.transition-fade {
+  opacity: 1;
+  transition: 500ms;
+  transform: translateX(0);
+  transform-origin: left;
+}
+.handImg {
+  width: 50px;
+}
+
 main {
-  flex: 1; 
+  flex: 1;
 }
 body {
   display: flex;
@@ -18,51 +43,98 @@ body {
 }
 
 footer {
-  background-color: #262323; /* Adjust background color */
-  color: #fff; 
-  padding: 20px; 
+  color: #fff;
   width: 100%;
 }
-
 
 .btn-bold {
   font-weight: bold !important;
 }
 
+#carouselExampleIndicators {
+  width: 30%; /* Set your desired fixed width */
+  margin: auto;
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 400px; /* Set your desired fixed height */
+}
+
+.carousel-inner .carousel-item.active {
+  transform: translateX(0%);
+}
+
+.carousel-inner .carousel-item:not(.active) {
+  transform: translateX(100%);
+}
+
+.carousel-inner .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Ensure each item takes up the full width */
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-inner .carousel-item img {
+  display: block; /* Ensure images are treated as block elements */
+  margin: 0 auto; /* Center images horizontally */
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .carousel-control-prev,
 .carousel-control-next {
-  width: 50px;
-  max-width: none;
-  z-index: 1;
+  width: 100px; /* Set your desired fixed width for controls */
+  max-width: none; /* Override Bootstrap's default max-width for controls */
+  z-index: 1; /* Ensure controls appear above the images */
 }
 
-.fa-brands {
-  font-size: 20px;
+.card {
+  margin-top: 25px;
+  border-radius: 50px;
+  overflow: hidden;
 }
-
+.card {
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  box-shadow: -6px -6px 12px #333;
+}
 
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.fa-youtube {
+  font-size: 20px;
+}
 
+.btn {
+  box-shadow: -4px -4px 8px #333;
+}
 .cardImg {
   height: 250px;
-  margin-top: 15px;
 }
 
-.Port {
-  border-radius: 15px;
+.card-img-top {
+  object-fit: cover;
 }
 
-.email-text {
-  color: #fff;
-}
 .Qaiwan {
-  width: 100px;
+  width: 150px;
 }
 
 .Qaiwan2 {
   width: 150px;
+}
+
+.email-text {
+  font-size: 35px;
+}
+
+.git {
+  font-size: 35px;
 }
